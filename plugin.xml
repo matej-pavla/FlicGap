@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="com.imaketherules.cordova.flic.FlicGap"
+      version="0.0.1">
+    <name>FlicGap</name>
+    <description>Cordova FlicGap Plugin</description>
+    <license>Apache</license>
+    <keywords>cordova,flic</keywords>
+
+    <js-module src="www/FlicGap.js" name="FlicGap">
+        <clobbers target="FlicGap" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="FlicGap">
+                <param name="android-package" value="com.imaketherules.cordova.flic.FlicGap"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/FlicGap.java" target-dir="src/com/imaketherules/cordova/flic" />
+		<framework src="src/android/flicGap.gradle" custom="true" type="gradleReference" />
+        <resource-file src="libs/fliclib-release.aar" target="libs/fliclib-release.aar" />
+	</platform>
+</plugin>
