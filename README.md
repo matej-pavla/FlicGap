@@ -1,4 +1,4 @@
-FlicGap - Cordova Plugin for handling the FLIC button
+FlicGap - Cordova Plugin for handling the Flic button
 =======================
 
 Supported Platforms
@@ -8,16 +8,16 @@ Android
 How to use the plugin in your Cordova project
 =======================
 1. Clone the repository to your local machine
- - (1.5) to obtain the newest copy of the Flic Android Library, clone https://github.com/50ButtonsEach/fliclib-android . Open the fliclib folder in Android studio and generate aar file (Gradle -> Tasks -> Build -> assembleRelease)
-2. Open the file src/android/FlicGap.java in your editor and input your Flic credentials. Namely constants:
+ - (1.1 Optional) to obtain the newest copy of the Flic Android Library, clone https://github.com/50ButtonsEach/fliclib-android . Open the fliclib folder in Android studio and generate aar file (Gradle -> Tasks -> Build -> assembleRelease). Then replace the ```libs/fliclib-release.aar``` file. <br />
+2. Open the file src/android/FlicGap.java in your editor and input your Flic credentials. Namely, change following constants:
 ```
 FLIC_APP_ID
 FLIC_APP_SECRET
 FLIC_APP_NAME
 ```
 For more information about the credentials and how to generate them, please visit: https://flic.io/partners/developers/credentials  
-3. ```cd``` to your cordova application directory
-4. run ```cordova plugin add [PATH TO THE FLICGAP PLUGIN FOLDER]```
+3. ```cd``` to your cordova application directory  
+4. run ```cordova plugin add [PATH TO THE FLICGAP PLUGIN FOLDER]```  
 5. In your javascript application:
 ```
    var flic = new FlicGap(); //FlicGap init
@@ -33,9 +33,9 @@ to remove the plugin from your project run: ```cordova plugin remove com.imaketh
 
 Future Work
 =======================
-Would be nice to add:
--support for iOS platform
--more callbacks for Flic button events: Flic Hold Button Event, Flic not found error event, etc.
+Would be nice to add:<br />
+-support for iOS platform<br />
+-more callbacks for Flic button events: Flic Hold Button Event, Flic not found error event, etc.<br />
 
 Disclaimer
 =======================
